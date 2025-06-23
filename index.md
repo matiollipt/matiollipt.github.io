@@ -1,8 +1,8 @@
 # Dr. Cleverson Matiolli
-**Ph.D. in Biology | Machine Learning Specialist **
+Ph.D. in Biology | Machine Learning Specialist
 
 I explore the interface between biological systems and machine intelligence.  
-My work integrates structural biology, agentic AI, and interpretable ML pipelines.
+My work integrates agriculture, structural biology, agentic AI, and interpretable ML pipelines.
 
 ---
 
