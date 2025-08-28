@@ -1,1115 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cleverson Matiolli, Ph.D. | Data Scientist Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#4f46e5",
-              secondary: "#7c3aed",
-              accent: "#3b82f6",
-              dark: "#1e293b",
-              light: "#f0f4f8",
-              syn1: "#a5b4fc",
-              syn2: "#7dd3fc",
-              syn3: "#60a5fa",
-              syn4: "#38bdf8",
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              mono: ["Fira Code", "monospace"],
-              serif: ["Playfair Display", "serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@400;600&display=swap");
-
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f0f4f8;
-        color: #1e293b;
-        scroll-behavior: smooth;
-      }
-
-      h1,
-      h2,
-      h3 {
-        font-family: "Playfair Display", serif;
-      }
-
-      .gradient-text {
-        background: linear-gradient(90deg, #4f46e5, #60a5fa, #3b82f6);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-
-      .synesthetic-bg {
-        background: linear-gradient(
-          135deg,
-          rgba(165, 180, 252, 0.1),
-          rgba(125, 211, 252, 0.1),
-          rgba(96, 165, 250, 0.1),
-          rgba(56, 189, 248, 0.1)
-        );
-      }
-
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-      }
-
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: -1.5rem;
-        top: 0;
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      }
-
-      .skill-bar {
-        height: 0.5rem;
-        background-color: #e2e8f0;
-        border-radius: 0.25rem;
-      }
-
-      .skill-progress {
-        height: 100%;
-        border-radius: 0.25rem;
-        background: linear-gradient(90deg, #6366f1, #8b5cf6);
-        transition: width 1s ease-in-out;
-      }
-
-      .project-card {
-        perspective: 1000px;
-      }
-
-      .project-inner {
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-      }
-
-      .project-card:hover .project-inner {
-        transform: rotateY(180deg);
-      }
-
-      .project-front,
-      .project-back {
-        backface-visibility: hidden;
-      }
-
-      .project-back {
-        transform: rotateY(180deg);
-      }
-
-      .floating {
-        animation: floating 6s ease-in-out infinite;
-      }
-
-      @keyframes floating {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-15px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      .pulse {
-        animation: pulse 2s infinite;
-      }
-
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
-        }
-        70% {
-          box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
-        }
-      }
-    </style>
-  </head>
-  <body class="antialiased">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex items-center">
-            <a href="#" class="text-xl font-bold gradient-text">CM</a>
-          </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="#about" class="text-dark hover:text-primary transition"
-              >About</a
-            >
-            <a
-              href="#experience"
-              class="text-dark hover:text-primary transition"
-              >Experience</a
-            >
-            <a href="#projects" class="text-dark hover:text-primary transition"
-              >Projects</a
-            >
-            <a href="#skills" class="text-dark hover:text-primary transition"
-              >Skills</a
-            >
-            <a href="#contact" class="text-dark hover:text-primary transition"
-              >Contact</a
-            >
-          </div>
-          <div class="md:hidden flex items-center">
-            <button id="menu-btn" class="text-dark">
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleverson Matiolli, Ph.D. | Data Scientist & Molecular Biologist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .gradient-text { background: linear-gradient(90deg, #3b82f6, #10b981); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .skill-bar { height: 8px; border-radius: 4px; background-color: #e5e7eb; overflow: hidden; }
+    .skill-progress { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #3b82f6, #10b981); transition: width 1s ease-in-out; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    .timeline::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 2px; background-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-green-50">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div class="md:w-1/2 mb-10">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Cleverson Matiolli, <span class="gradient-text">Ph.D.</span></h1>
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">Data Scientist | Molecular Biologist</h2>
+        <p class="text-lg text-gray-600 mb-6">Interdisciplinary researcher and ML specialist bridging life sciences, machine learning, and data-driven solutions for academia and industry. Author of 15+ peer-reviewed papers, experienced in bioinformatics, computational biology, and applied AI for biotech and agritech.</p>
+        <div class="flex space-x-4">
+          <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow">Contact Me</a>
+          <a href="#projects" class="px-6 py-3 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50">View Projects</a>
         </div>
       </div>
-      <!-- Mobile menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white py-2 px-4 shadow-lg"
-      >
-        <a
-          href="#about"
-          class="block py-2 text-dark hover:text-primary transition"
-          >About</a
-        >
-        <a
-          href="#experience"
-          class="block py-2 text-dark hover:text-primary transition"
-          >Experience</a
-        >
-        <a
-          href="#projects"
-          class="block py-2 text-dark hover:text-primary transition"
-          >Projects</a
-        >
-        <a
-          href="#skills"
-          class="block py-2 text-dark hover:text-primary transition"
-          >Skills</a
-        >
-        <a
-          href="#contact"
-          class="block py-2 text-dark hover:text-primary transition"
-          >Contact</a
-        >
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 md:pt-32 md:pb-24 synesthetic-bg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-1/2 mb-10 md:mb-0">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-              Cleverson Matiolli, <span class="gradient-text">Ph.D.</span>
-            </h1>
-            <h2 class="text-2xl md:text-3xl font-semibold text-dark mb-6">
-              Machine Learning Scientist | Molecular Biologist
-            </h2>
-            <p class="text-lg text-dark mb-8 max-w-lg">
-              Bridging empirical research and computational modeling with
-              scientific rigor and practical solutions.
-            </p>
-            <div class="flex space-x-4">
-              <a
-                href="#contact"
-                class="px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition shadow-md hover:shadow-lg"
-              >
-                Contact Me
-              </a>
-              <a
-                href="#projects"
-                class="px-6 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/10 transition"
-              >
-                View Projects
-              </a>
-            </div>
-          </div>
-          <div class="md:w-1/2 flex justify-center">
-            <div
-              class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl floating"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-syn1 to-syn2 opacity-70"
-              ></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-white text-7xl font-bold">CM</div>
-              </div>
-            </div>
-          </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+          <img src="profile.jpg" alt="Cleverson Matiolli" class="w-full h-full object-cover">
         </div>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-dark mb-4">
-            Professional Summary
-          </h2>
-          <div class="w-20 h-1 bg-primary mx-auto"></div>
+  <!-- About -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">About <span class="gradient-text">Me</span></h2>
+      <p class="text-lg text-gray-700 mb-4">With a Ph.D. in Genetics and Molecular Biology (Unicamp) and a specialization in Machine Learning & Big Data, I combine wet-lab expertise with advanced computational modeling. I design reproducible pipelines for multi-omics analysis, geospatial forecasting, and graph-based learning. My work supports biomedical decision-making, crop resilience, and biotech innovation.</p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Professional <span class="gradient-text">Experience</span></h2>
+      <div class="space-y-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold">Freelance Data Scientist & ML Specialist</h3>
+          <p class="text-sm text-gray-500">Lisbon, Portugal — 2024–Present</p>
+          <ul class="list-disc ml-5 mt-2 text-gray-700">
+            <li>Predictive modeling in oncology, agriculture, and implant design.</li>
+            <li>Created <b>AidWeather</b>, an agroclimatic decision-support tool.</li>
+            <li>Contributed to cross-continental phenotyping & crop improvement projects.</li>
+          </ul>
         </div>
-
-        <div
-          class="bg-gradient-to-r from-syn1/10 to-syn3/10 p-8 rounded-xl shadow-sm mb-8"
-        >
-          <p class="text-lg text-dark mb-6">
-            <span class="font-bold">TL;DR:</span> Domain expertise meets machine
-            learning to deliver real-world impact.
-          </p>
-          <p class="text-dark mb-4">
-            I'm a Machine Learning Scientist with a Ph.D. in Genetics and
-            Molecular Biology. My work blends wet-lab experience with data
-            science to design analytical pipelines from hypothesis to
-            reproducible results.
-          </p>
-          <p class="text-dark mb-4">
-            I thrive in cross-functional projects where domain knowledge and
-            computational modeling align to solve research and business
-            challenges.
-          </p>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold">Research Scientist | ITQB-NOVA</h3>
+          <p class="text-sm text-gray-500">Lisbon, Portugal — 2019–2024</p>
+          <ul class="list-disc ml-5 mt-2 text-gray-700">
+            <li>Developed plant phenotyping tools using Python & CV.</li>
+            <li>Led multi-omics integration to identify rice stress resilience networks.</li>
+            <li>Mentored graduate students and co-authored international publications.</li>
+          </ul>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div
-            class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-primary"
-          >
-            <div class="text-primary text-3xl mb-4">
-              <i class="fas fa-flask"></i>
-            </div>
-            <h3 class="text-xl font-bold text-dark mb-2">Scientific Rigor</h3>
-            <p class="text-dark">
-              PhD-level research experience with hypothesis-driven approaches
-              and reproducible methods.
-            </p>
-          </div>
-          <div
-            class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-secondary"
-          >
-            <div class="text-secondary text-3xl mb-4">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3 class="text-xl font-bold text-dark mb-2">Data Science</h3>
-            <p class="text-dark">
-              Specialized in ML, NLP, and graph analytics with practical
-              business applications.
-            </p>
-          </div>
-          <div
-            class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-accent"
-          >
-            <div class="text-accent text-3xl mb-4">
-              <i class="fas fa-project-diagram"></i>
-            </div>
-            <h3 class="text-xl font-bold text-dark mb-2">Interdisciplinary</h3>
-            <p class="text-dark">
-              Bridging domains from molecular biology to machine learning
-              engineering.
-            </p>
-          </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold">Research Scientist | UC Davis</h3>
+          <p class="text-sm text-gray-500">Davis, CA, USA — 2017–2019</p>
+          <ul class="list-disc ml-5 mt-2 text-gray-700">
+            <li>Designed field and greenhouse experiments for tomato & maize.</li>
+            <li>Implemented pipelines for gene expression & hormone quantification.</li>
+            <li>Built protein interaction datasets via yeast two-hybrid assays.</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-16 synesthetic-bg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-dark mb-4">
-            Professional Experience
-          </h2>
-          <div class="w-20 h-1 bg-primary mx-auto"></div>
+  <!-- Projects -->
+  <section id="projects" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Key <span class="gradient-text">Projects</span></h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="project-card bg-white rounded-lg shadow p-6">
+          <h3 class="font-bold text-lg">AidWeather (Agrilyzer)</h3>
+          <p class="text-sm text-gray-600">Python package integrating NASA POWER climate data for crop forecasting and decision support.</p>
         </div>
-
-        <div class="relative">
-          <!-- Timeline -->
-          <div class="border-l-2 border-primary/30 pl-8 space-y-12">
-            <!-- Experience 1 -->
-            <div class="relative timeline-item">
-              <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                  <h3 class="text-xl font-bold text-dark">
-                    Freelance Data Scientist & ML Specialist
-                  </h3>
-                  <span class="text-primary font-medium">2024–Present</span>
-                </div>
-                <p class="text-dark mb-4">Lisbon, Portugal</p>
-                <ul class="list-disc pl-5 space-y-2 text-dark">
-                  <li>
-                    Developed predictive models for stratifying patient outcomes
-                    using transcriptomic data to support precision oncology.
-                  </li>
-                  <li>
-                    Designed regression models with engineered mechanical and
-                    biological properties to predict performance of 3D-printed
-                    bone implants.
-                  </li>
-                  <li>
-                    Authored thought leadership articles on deep learning, graph
-                    theory, and multi-omics analysis.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Experience 2 -->
-            <div class="relative timeline-item">
-              <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                  <h3 class="text-xl font-bold text-dark">
-                    Research Scientist | ITQB-NOVA
-                  </h3>
-                  <span class="text-primary font-medium">2019–2024</span>
-                </div>
-                <p class="text-dark mb-4">Lisbon, Portugal</p>
-                <ul class="list-disc pl-5 space-y-2 text-dark">
-                  <li>
-                    Designed an image-based phenotyping application using Python
-                    and computer vision to automate quantification of plant
-                    roots.
-                  </li>
-                  <li>
-                    Coordinated multi-omics research integrating transcriptomic,
-                    proteomic, and metabolomic datasets.
-                  </li>
-                  <li>
-                    Built protein–protein interaction maps to reveal signaling
-                    cascades.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Experience 3 -->
-            <div class="relative timeline-item">
-              <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                  <h3 class="text-xl font-bold text-dark">
-                    Research Scientist | UC Davis
-                  </h3>
-                  <span class="text-primary font-medium">2017–2019</span>
-                </div>
-                <p class="text-dark mb-4">Davis, CA, USA</p>
-                <ul class="list-disc pl-5 space-y-2 text-dark">
-                  <li>
-                    Managed academic-industry projects to evaluate biological
-                    additives for tomato crop improvement.
-                  </li>
-                  <li>
-                    Designed and set greenhouse and field experiments to assess
-                    plant interactions.
-                  </li>
-                  <li>
-                    Implemented gene expression and hormone quantification
-                    pipelines.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="project-card bg-white rounded-lg shadow p-6">
+          <h3 class="font-bold text-lg">graphletGO</h3>
+          <p class="text-sm text-gray-600">Graph Neural Network model predicting protein functions from PPI and embeddings.</p>
+        </div>
+        <div class="project-card bg-white rounded-lg shadow p-6">
+          <h3 class="font-bold text-lg">Fake News Detection Pipeline</h3>
+          <p class="text-sm text-gray-600">Transformer and TF-IDF-based classifiers for misinformation detection, with XAI interpretability.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-dark mb-4">
-            Key Projects & Impact
-          </h2>
-          <div class="w-20 h-1 bg-primary mx-auto"></div>
+  <!-- Skills -->
+  <section id="skills" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Technical <span class="gradient-text">Skills</span></h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold mb-2">Data Science & ML</h3>
+          <p class="text-gray-700">Python, R, SQL, scikit-learn, PyTorch, TensorFlow, PyTorch Geometric, XAI, time-series & geospatial analysis.</p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 -->
-          <div class="project-card h-full">
-            <div class="project-inner h-full">
-              <div
-                class="project-front h-full bg-gradient-to-br from-syn1/10 to-syn2/10 p-6 rounded-xl shadow-sm card-hover"
-              >
-                <div class="text-primary text-3xl mb-4">
-                  <i class="fas fa-cloud-sun-rain"></i>
-                </div>
-                <h3 class="text-xl font-bold text-dark mb-2">aidweather</h3>
-                <p class="text-dark mb-4">Agroclimatic Data Library</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                    >Python</span
-                  >
-                  <span
-                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm"
-                    >API</span
-                  >
-                  <span
-                    class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm"
-                    >Agriculture</span
-                  >
-                </div>
-                <button class="text-primary font-medium mt-auto">
-                  View Details →
-                </button>
-              </div>
-              <div
-                class="project-back absolute inset-0 bg-gradient-to-br from-syn3/10 to-syn4/10 p-6 rounded-xl shadow-sm"
-              >
-                <h3 class="text-xl font-bold text-dark mb-2">aidweather</h3>
-                <p class="text-dark mb-4">
-                  Lightweight Python package for fetching and preprocessing NASA
-                  POWER meteorological time series for crop modeling.
-                </p>
-                <div class="flex space-x-3">
-                  <a
-                    href="https://github.com/matiollipt/aidweather"
-                    class="text-primary hover:text-primary/80"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project-card h-full">
-            <div class="project-inner h-full">
-              <div
-                class="project-front h-full bg-gradient-to-br from-syn2/10 to-syn3/10 p-6 rounded-xl shadow-sm card-hover"
-              >
-                <div class="text-secondary text-3xl mb-4">
-                  <i class="fas fa-project-diagram"></i>
-                </div>
-                <h3 class="text-xl font-bold text-dark mb-2">GO-graph-EDA</h3>
-                <p class="text-dark mb-4">Network Analysis for Gene Ontology</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                    >Networks</span
-                  >
-                  <span
-                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm"
-                    >Bioinformatics</span
-                  >
-                  <span
-                    class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm"
-                    >Jupyter</span
-                  >
-                </div>
-                <button class="text-primary font-medium mt-auto">
-                  View Details →
-                </button>
-              </div>
-              <div
-                class="project-back absolute inset-0 bg-gradient-to-br from-syn4/10 to-syn1/10 p-6 rounded-xl shadow-sm"
-              >
-                <h3 class="text-xl font-bold text-dark mb-2">GO-graph-EDA</h3>
-                <p class="text-dark mb-4">
-                  Interactive notebooks exploring the Gene Ontology graph with
-                  network science and Python visualization libraries.
-                </p>
-                <div class="flex space-x-3">
-                  <a
-                    href="https://github.com/matiollipt/GO-graph-EDA"
-                    class="text-primary hover:text-primary/80"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card h-full">
-            <div class="project-inner h-full">
-              <div
-                class="project-front h-full bg-gradient-to-br from-syn3/10 to-syn4/10 p-6 rounded-xl shadow-sm card-hover"
-              >
-                <div class="text-accent text-3xl mb-4">
-                  <i class="fas fa-share-alt"></i>
-                </div>
-                <h3 class="text-xl font-bold text-dark mb-2">gppinlib</h3>
-                <p class="text-dark mb-4">Graph-based Protein Interactions</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                    >GNN</span
-                  >
-                  <span
-                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm"
-                    >Proteomics</span
-                  >
-                  <span
-                    class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm"
-                    >PyTorch</span
-                  >
-                </div>
-                <button class="text-primary font-medium mt-auto">
-                  View Details →
-                </button>
-              </div>
-              <div
-                class="project-back absolute inset-0 bg-gradient-to-br from-syn1/10 to-syn2/10 p-6 rounded-xl shadow-sm"
-              >
-                <h3 class="text-xl font-bold text-dark mb-2">gppinlib</h3>
-                <p class="text-dark mb-4">
-                  Predicts protein–protein interactions with graph neural
-                  networks and AlphaFold-derived structures using PyTorch
-                  Geometric.
-                </p>
-                <div class="flex space-x-3">
-                  <a
-                    href="https://github.com/matiollipt/gppin"
-                    class="text-primary hover:text-primary/80"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <a
-            href="https://github.com/matiollipt"
-            class="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/10 transition"
-          >
-            <i class="fab fa-github mr-2"></i> View All Projects on GitHub
-          </a>
+        <div>
+          <h3 class="font-semibold mb-2">Bioinformatics</h3>
+          <p class="text-gray-700">Transcriptomics, proteomics, pathway analysis, RNA-seq, DESeq2, OpenCV for phenotyping.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 synesthetic-bg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-dark mb-4">Core Competencies</h2>
-          <div class="w-20 h-1 bg-primary mx-auto"></div>
-        </div>
+  <!-- Education -->
+  <section id="education" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Education & <span class="gradient-text">Certifications</span></h2>
+      <ul class="space-y-4">
+        <li><b>Ph.D.</b> Genetics & Molecular Biology, Unicamp (2012)</li>
+        <li><b>Specialization</b> in ML & Big Data, Unicamp (2022)</li>
+        <li>Stanford CS231 Graph Representation Learning (non-cert.)</li>
+        <li>IBM AI Engineering & RDBMS Certificates (ongoing)</li>
+      </ul>
+    </div>
+  </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Left Column -->
-          <div>
-            <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
-              <h3 class="text-xl font-bold text-dark mb-4">Data & Analytics</h3>
-              <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Python (Pandas, NumPy)</span>
-                    <span class="text-dark font-medium">95%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 95%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">R (ggplot2, tidyverse)</span>
-                    <span class="text-dark font-medium">90%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">SQL</span>
-                    <span class="text-dark font-medium">85%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Data Visualization</span>
-                    <span class="text-dark font-medium">90%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-              <h3 class="text-xl font-bold text-dark mb-4">Machine Learning</h3>
-              <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">scikit-learn</span>
-                    <span class="text-dark font-medium">95%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 95%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">TensorFlow/PyTorch</span>
-                    <span class="text-dark font-medium">90%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Model Evaluation</span>
-                    <span class="text-dark font-medium">92%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 92%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Explainable AI (XAI)</span>
-                    <span class="text-dark font-medium">88%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 88%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column -->
-          <div>
-            <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
-              <h3 class="text-xl font-bold text-dark mb-4">
-                NLP & Transformers
-              </h3>
-              <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Hugging Face</span>
-                    <span class="text-dark font-medium">90%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">spaCy/NLTK</span>
-                    <span class="text-dark font-medium">85%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Text Classification</span>
-                    <span class="text-dark font-medium">92%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 92%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Ontology Embeddings</span>
-                    <span class="text-dark font-medium">88%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 88%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-              <h3 class="text-xl font-bold text-dark mb-4">Bioinformatics</h3>
-              <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Transcriptomics</span>
-                    <span class="text-dark font-medium">95%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 95%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Pathway Analysis</span>
-                    <span class="text-dark font-medium">90%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Image Analysis</span>
-                    <span class="text-dark font-medium">85%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <span class="text-dark">Multi-omics Integration</span>
-                    <span class="text-dark font-medium">88%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 88%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Get In <span class="gradient-text">Touch</span></h2>
+      <div class="text-center space-y-2">
+        <p><i class="fas fa-envelope text-blue-500"></i> <a href="mailto:matiolli@gmail.com">matiolli@gmail.com</a></p>
+        <p><i class="fab fa-linkedin text-blue-500"></i> <a href="https://linkedin.com/in/cleversonmatiolli">linkedin.com/in/cleversonmatiolli</a></p>
+        <p><i class="fab fa-github text-gray-700"></i> <a href="https://github.com/matiollipt">github.com/matiollipt</a></p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-dark mb-4">
-            Education & Certifications
-          </h2>
-          <div class="w-20 h-1 bg-primary mx-auto"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            class="bg-gradient-to-br from-syn1/10 to-syn2/10 p-6 rounded-xl shadow-sm card-hover"
-          >
-            <div class="text-primary text-3xl mb-4">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h3 class="text-xl font-bold text-dark mb-2">
-              Ph.D. Genetics & Molecular Biology
-            </h3>
-            <p class="text-dark mb-2">Unicamp</p>
-            <p class="text-dark/70">2012</p>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-syn2/10 to-syn3/10 p-6 rounded-xl shadow-sm card-hover"
-          >
-            <div class="text-secondary text-3xl mb-4">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <h3 class="text-xl font-bold text-dark mb-2">
-              Specialist in ML & Big Data
-            </h3>
-            <p class="text-dark mb-2">Institute of Computing, Unicamp</p>
-            <p class="text-dark/70">2022</p>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-syn3/10 to-syn4/10 p-6 rounded-xl shadow-sm card-hover"
-          >
-            <div class="text-accent text-3xl mb-4">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <h3 class="text-xl font-bold text-dark mb-2">
-              Machine Learning A-Z
-            </h3>
-            <p class="text-dark mb-2">Udemy</p>
-            <p class="text-dark/70">2021</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 synesthetic-bg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-dark mb-4">Get In Touch</h2>
-          <div class="w-20 h-1 bg-primary mx-auto"></div>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-12">
-          <div class="md:w-1/2">
-            <div class="bg-white p-8 rounded-xl shadow-sm">
-              <h3 class="text-xl font-bold text-dark mb-6">
-                Contact Information
-              </h3>
-
-              <div class="space-y-6">
-                <div class="flex items-start">
-                  <div class="text-primary text-xl mr-4 mt-1">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-dark">Location</h4>
-                    <p class="text-dark">Campinas, São Paulo, Brasil</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="text-primary text-xl mr-4 mt-1">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-dark">Email</h4>
-                    <p class="text-dark">matiolli@gmail.com</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="text-primary text-xl mr-4 mt-1">
-                    <i class="fab fa-linkedin"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-dark">LinkedIn</h4>
-                    <p class="text-dark">linkedin.com/in/cleversonmatiolli</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="text-primary text-xl mr-4 mt-1">
-                    <i class="fab fa-github"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-dark">GitHub</h4>
-                    <p class="text-dark">github.com/cleversonmatiolli</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-8">
-                <h4 class="font-medium text-dark mb-4">Connect with me</h4>
-                <div class="flex space-x-4">
-                  <a
-                    href="#"
-                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition"
-                  >
-                    <i class="fab fa-medium"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="md:w-1/2">
-            <div class="bg-white p-8 rounded-xl shadow-sm">
-              <h3 class="text-xl font-bold text-dark mb-6">
-                Send Me a Message
-              </h3>
-              <form>
-                <div class="mb-6">
-                  <label for="name" class="block text-dark font-medium mb-2"
-                    >Your Name</label
-                  >
-                  <input
-                    type="text"
-                    id="name"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-
-                <div class="mb-6">
-                  <label for="email" class="block text-dark font-medium mb-2"
-                    >Email Address</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-
-                <div class="mb-6">
-                  <label for="subject" class="block text-dark font-medium mb-2"
-                    >Subject</label
-                  >
-                  <input
-                    type="text"
-                    id="subject"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-
-                <div class="mb-6">
-                  <label for="message" class="block text-dark font-medium mb-2"
-                    >Message</label
-                  >
-                  <textarea
-                    id="message"
-                    rows="5"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  class="w-full px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition shadow-md hover:shadow-lg"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 bg-dark text-light">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-4 md:mb-0">
-            <a href="#" class="text-2xl font-bold gradient-text">CM</a>
-          </div>
-          <div class="text-center md:text-right">
-            <p class="text-light/80">
-              © 2024 Cleverson Matiolli. All rights reserved.
-            </p>
-            <p class="text-light/60 text-sm mt-1">
-              Designed with passion for data and aesthetics
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button
-      id="back-to-top"
-      class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg hidden items-center justify-center"
-    >
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-      // Mobile menu toggle
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // Back to top button
-      const backToTopBtn = document.getElementById("back-to-top");
-
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          backToTopBtn.classList.remove("hidden");
-          backToTopBtn.classList.add("flex");
-        } else {
-          backToTopBtn.classList.add("hidden");
-          backToTopBtn.classList.remove("flex");
-        }
-      });
-
-      backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: "smooth",
-            });
-
-            // Close mobile menu if open
-            mobileMenu.classList.add("hidden");
-          }
-        });
-      });
-
-      // Animate skill bars on scroll
-      const animateSkillBars = () => {
-        const skillBars = document.querySelectorAll(".skill-progress");
-
-        skillBars.forEach((bar) => {
-          const width = bar.style.width;
-          bar.style.width = "0%";
-
-          const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-              bar.style.width = width;
-              observer.unobserve(bar.parentElement.parentElement);
-            }
-          });
-
-          observer.observe(bar.parentElement.parentElement);
-        });
-      };
-
-      // Initialize animations when page loads
-      window.addEventListener("load", () => {
-        animateSkillBars();
-      });
-    </script>
-  </body>
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-white text-center">
+    <p>&copy; 2025 Cleverson Matiolli. All rights reserved.</p>
+  </footer>
+</body>
 </html>

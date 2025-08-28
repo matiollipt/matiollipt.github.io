@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Cleverson Matiolli - Top Publications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .citation-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+        .year-badge {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <div class="flex flex-col items-center">
+                <div class="w-24 h-24 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 p-1 mb-4">
+                    <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+                        <i class="fas fa-user-graduate text-3xl text-blue-500"></i>
+                    </div>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Dr. Cleverson Matiolli</h1>
+                <p class="text-lg text-gray-600 mb-3">PhD in Plant Molecular Biology</p>
+                <div class="flex items-center text-blue-600">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>Verified email at itqb.unl.pt</span>
+                </div>
+                <div class="flex flex-wrap justify-center mt-4 gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">calcium signaling</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">chronobiology</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">gibberellin signaling</span>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">systems biology</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Publications Section -->
+        <section>
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Top 10 Publications</h2>
+                <div class="flex items-center">
+                    <span class="text-sm text-gray-500 mr-2">Sorted by:</span>
+                    <select class="border rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Citations (High to Low)</option>
+                        <option>Year (Recent First)</option>
+                        <option>Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Publication 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            165 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2018
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Circadian entrainment in Arabidopsis by the sugar-responsive transcription factor bZIP63</h3>
+                        <p class="text-gray-600 mb-3">A Frank, CC Matiolli, AJC Viana, TJ Hearn, J Kusakina, FE Belbin, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">Current Biology 28 (16), 2597-2606. e6</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Circadian rhythms</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Arabidopsis</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Transcriptional regulation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            129 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2011
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">The Arabidopsis bZIP gene AtbZIP63 is a sensitive integrator of transient abscisic acid and glucose signals</h3>
+                        <p class="text-gray-600 mb-3">CC Matiolli, JP Tomaz, GT Duarte, FM Prado, LEV Del Bem, AB Silveira, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">Plant physiology 157 (2), 692-705</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Abscisic acid</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Glucose signaling</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">bZIP transcription factors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            68 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2020
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">JAZ4 is involved in plant defense, growth, and development in Arabidopsis</h3>
+                        <p class="text-gray-600 mb-3">PR Oblessuc, N Obulareddy, L DeMott, CC Matiolli, BK Thompson, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">The Plant Journal 101 (2), 371-383</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Plant defense</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">JAZ proteins</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Arabidopsis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            33 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2014
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Selection and validation of reference genes for functional studies in the Calliphoridae family</h3>
+                        <p class="text-gray-600 mb-3">GA Cardoso, CC Matiolli, AML de Azeredo-Espin, TT Torres</p>
+                        <p class="text-sm text-gray-500 mb-4">Journal of Insect Science 14 (1), 2</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Reference genes</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Calliphoridae</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Gene expression</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            28 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2021
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">The sugar-responsive circadian clock regulator bZIP63 modulates plant growth</h3>
+                        <p class="text-gray-600 mb-3">AJC Viana, CC Matiolli, DW Newman, JGP Vieira, GT Duarte, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">New Phytologist 231 (5), 1875-1889</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Circadian clock</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Plant growth</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Sugar signaling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            26 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2021
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Carbon/nitrogen metabolism and stress response networks–calcium-dependent protein kinases as the missing link?</h3>
+                        <p class="text-gray-600 mb-3">HLS Alves, CC Matiolli, RC Soares, MC Almadanim, MM Oliveira, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">Journal of Experimental Botany 72 (12), 4190-4201</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Calcium signaling</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Stress response</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Protein kinases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 7 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            26 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2015
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Common bean reaction to angular leaf spot comprises transcriptional modulation of genes in the ALS10.1 QTL</h3>
+                        <p class="text-gray-600 mb-3">PR Oblessuc, CC Matiolli, AF Chiorato, LEA Camargo, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">Frontiers in Plant Science 6, 152</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Common bean</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Disease resistance</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">QTL analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 8 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            22 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2013
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Involvement of microRNA-related regulatory pathways in the glucose-mediated control of Arabidopsis early seedling development</h3>
+                        <p class="text-gray-600 mb-3">GT Duarte, CC Matiolli, BD Pant, A Schlereth, WR Scheible, M Stitt, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">Journal of experimental botany 64 (14), 4301-4312</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">microRNA</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Seedling development</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Glucose signaling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 9 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            21 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2020
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Novel molecular components involved in callose-mediated Arabidopsis defense against Salmonella enterica and Escherichia coli O157:H7</h3>
+                        <p class="text-gray-600 mb-3">PR Oblessuc, CC Matiolli, M Melotto</p>
+                        <p class="text-sm text-gray-500 mb-4">BMC plant biology 20 (1), 16</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Plant defense</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Human pathogens</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Callose deposition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 10 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative">
+                    <div class="p-6">
+                        <div class="citation-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            17 citations
+                        </div>
+                        <div class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            2007
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">First Report on the Transmission of 'Candidatus Liberibacter americanus' from Citrus to Nicotiana tabacum cv. Xanthi</h3>
+                        <p class="text-gray-600 mb-3">FJB Francischini, KDS Oliveira, G Astua-Monge, A Novelli, R Lorenzino, ...</p>
+                        <p class="text-sm text-gray-500 mb-4">Plant Disease 91 (5), 631-631</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded">Plant pathology</span>
+                            <span class="text-xs px-2 py-1 bg-green-50 text-green-600 rounded">Disease transmission</span>
+                            <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">Bacterial pathogen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <i class="fab fa-google-scholar text-xl"></i>
+                </a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <i class="fab fa-researchgate text-xl"></i>
+                </a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <i class="fab fa-orcid text-xl"></i>
+                </a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+            <p>© 2024 Dr. Cleverson Matiolli. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple script to handle the sorting functionality
+        document.querySelector('select').addEventListener('change', function() {
+            alert('Sorting functionality would be implemented here in a real application');
+        });
+    </script>
+</body>
+</html>
