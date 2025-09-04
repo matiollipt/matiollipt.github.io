@@ -1,213 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cleverson Matiolli, Ph.D. | Consultant in Molecular Biology & Precision Agriculture</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AidBio — Data Science & ML for Life Sciences and Agritech</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-    .gradient-text { background: linear-gradient(90deg, #3b82f6, #10b981); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    :root{
+      --aidbio-primary:#0ea5a8; /* teal-500 */
+      --aidbio-accent:#22c55e;  /* green-500 */
+      --aidbio-ink:#0b1b1b;     /* charcoal */
+    }
+    html,body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Apple Color Emoji','Segoe UI Emoji',sans-serif}
+    .aidbio-gradient{background-image:linear-gradient(90deg,var(--aidbio-primary),var(--aidbio-accent));}
+    .aidbio-text-gradient{background-image:linear-gradient(90deg,var(--aidbio-primary),var(--aidbio-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .glass{backdrop-filter:saturate(160%) blur(10px); background-color:rgba(255,255,255,0.7)}
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- Navigation -->
-  <nav class="fixed w-full bg-white shadow-sm z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex items-center">
-          <a href="#" class="text-xl font-bold gradient-text">CM.</a>
-        </div>
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-          <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
-          <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
-          <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
-          <a href="#education" class="text-gray-600 hover:text-blue-600 transition">Education</a>
-          <a href="papers.html" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
-          <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-        </div>
+  <!-- NAV -->
+  <nav class="fixed inset-x-0 top-0 z-50 glass border-b border-white/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="aidbio_icon.png" alt="AidBio" class="h-8 w-8 rounded"/>
+        <span class="font-extrabold text-lg aidbio-text-gradient">AidBio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#services" class="text-gray-700 hover:text-emerald-600">Services</a>
+        <a href="#work" class="text-gray-700 hover:text-emerald-600">Featured Work</a>
+        <a href="papers.html" class="text-gray-700 hover:text-emerald-600">Publications</a>
+        <a href="#about" class="text-gray-700 hover:text-emerald-600">About</a>
+        <a href="#contact" class="text-gray-700 hover:text-emerald-600">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-green-50">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-      <div class="md:w-1/2 mb-10">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Cleverson Matiolli, <span class="gradient-text">Ph.D.</span></h1>
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">Consultant in Molecular Biology & Precision Agriculture</h2>
-        <p class="text-lg text-gray-600 mb-6">Consultant with extensive international research and consulting experience, leveraging deep expertise in genetics, molecular biology, and plant physiology together with data science and modern AI/ML frameworks to deliver impactful solutions across agriculture, biotechnology, and medicine.</p>
-        <div class="flex space-x-4">
-          <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow">Contact Me</a>
-          <a href="#projects" class="px-6 py-3 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50">View Projects</a>
+  <!-- HERO -->
+  <header class="pt-28 pb-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="uppercase tracking-wide text-xs text-gray-500 mb-2">Consulting • Data Science • Agentic AI</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-gray-900">Data‑driven decisions for <span class="aidbio-text-gradient">life sciences & agritech</span></h1>
+        <p class="text-lg text-gray-700 mb-8">AidBio is a boutique consultancy led by Cleverson Matiolli, PhD. I build <strong>end‑to‑end data and ML pipelines</strong>—from data strategy and EDA to robust models and decision dashboards—tailored for researchers and agritech SMEs.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-white font-semibold shadow-md aidbio-gradient">Work with AidBio</a>
+          <a href="papers.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-emerald-500 text-emerald-600 hover:bg-emerald-50 font-semibold">View Publications</a>
         </div>
       </div>
-      <div class="md:w-1/2 flex justify-center">
-        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-          <img src="profile.jpg" alt="Cleverson Matiolli" class="w-full h-full object-cover">
+      <div class="relative">
+        <div class="absolute -inset-4 rounded-3xl aidbio-gradient opacity-20 blur-2xl"></div>
+        <div class="relative bg-white rounded-3xl shadow-xl ring-1 ring-gray-100 p-6">
+          <img src="agrilyzer.png" alt="Agrilyzer Overlay Plot" class="w-full h-auto object-contain"/>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- About -->
+  <!-- TRUST / QUICK STATS -->
+  <section class="py-8 border-t border-b bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><div class="text-3xl font-extrabold aidbio-text-gradient">15+</div><div class="text-sm text-gray-600">peer‑reviewed papers</div></div>
+      <div><div class="text-3xl font-extrabold aidbio-text-gradient">10+</div><div class="text-sm text-gray-600">years in research & industry</div></div>
+      <div><div class="text-3xl font-extrabold aidbio-text-gradient">End‑to‑End</div><div class="text-sm text-gray-600">EDA → models → dashboards</div></div>
+      <div><div class="text-3xl font-extrabold aidbio-text-gradient">Agentic AI</div><div class="text-sm text-gray-600">automated pipelines & workflows</div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold mb-2">Services</h2>
+      <p class="text-gray-600 mb-8">Focused, high‑impact engagements for researchers and agritech startups.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl shadow p-6 ring-1 ring-gray-100">
+          <h3 class="font-bold text-lg mb-2">Data & Modeling Strategy</h3>
+          <p class="text-gray-700 text-sm">Study design, data audits, schema and feature strategy, reproducible workflows with clear documentation, version control, and testing.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 ring-1 ring-gray-100">
+          <h3 class="font-bold text-lg mb-2">Predictive ML & Modeling</h3>
+          <p class="text-gray-700 text-sm">Crop yield and risk prediction from climate time‑series; multi‑omics integration for patient stratification; and computational workflows for implants. PLSR/RF/XGBoost, GNNs, uncertainty & explainability.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 ring-1 ring-gray-100">
+          <h3 class="font-bold text-lg mb-2">Agentic AI Workflows</h3>
+          <p class="text-gray-700 text-sm">Automations and local‑LLM stacks (Ollama, llama.cpp) powering EDA, reporting, and decision support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section id="work" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold mb-8">Featured Work</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-2xl shadow p-6 ring-1 ring-gray-100">
+          <h3 class="font-semibold">Agrilyzer</h3>
+          <p class="text-sm text-gray-700">Geospatial ML for crop planning using climate data; forecasting and scenario analysis for agricultural systems.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6 ring-1 ring-gray-100">
+          <h3 class="font-semibold">Yield Optimization</h3>
+          <p class="text-sm text-gray-700">End‑to‑end EDA and modeling across plant trials; feature importance, scenario planning, and decision‑support dashboards.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6 ring-1 ring-gray-100">
+          <h3 class="font-semibold">Implant Design</h3>
+          <p class="text-sm text-gray-700">Predicting mechanical performance from design and process parameters; surrogate modeling, design‑space exploration, and optimization.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
   <section id="about" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">About <span class="gradient-text">Me</span></h2>
-      <p class="text-lg text-gray-700 mb-4">I bridge experimental biology with bioinformatics, machine learning, and predictive modeling. With a Ph.D. in Genetics and Molecular Biology and a specialization in Big Data and Deep Learning, I apply modern AI/ML frameworks to multi-omics datasets, geospatial forecasting, and graph-based learning. My passion lies in transforming complex biological data into actionable insights for precision agriculture, biotechnology, and medical applications.</p>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Professional <span class="gradient-text">Experience</span></h2>
-      <div class="space-y-8">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold">Freelance Data Scientist & ML Specialist</h3>
-          <p class="text-sm text-gray-500">Lisbon, Portugal — 2024–Present</p>
-          <ul class="list-disc ml-5 mt-2 text-gray-700">
-            <li>Built ML pipelines for precision oncology and optimized 3D-printed implant design.</li>
-            <li>Developed <b>Agrilyzer</b>, a geospatial ML tool integrating NASA POWER datasets for crop planning.</li>
-            <li>Analyzed agricultural practices and yield in crop improvement projects.</li>
-            <li>Authored blog posts and articles on deep learning and graph neural networks.</li>
-          </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold">Research Scientist | ITQB-NOVA</h3>
-          <p class="text-sm text-gray-500">Lisbon, Portugal — 2019–2024</p>
-          <ul class="list-disc ml-5 mt-2 text-gray-700">
-            <li>Performed multi-omics integration for gene, protein, and metabolite networks on rice stress resilience.</li>
-            <li>Designed ML pipelines for protein–protein interaction (PPI) prediction and network analysis.</li>
-            <li>Designed image-based phenotyping pipelines using Python, improving throughput by ~50%.</li>
-            <li>Built protein–protein interaction maps linked to carbon metabolism and stress signaling.</li>
-            <li>Mentored graduate students and co-wrote grants securing international funding.</li>
-          </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold">Research Scientist | UC Davis</h3>
-          <p class="text-sm text-gray-500">Davis, CA, USA — 2017–2019</p>
-          <ul class="list-disc ml-5 mt-2 text-gray-700">
-            <li>Managed industry-academia projects testing biological additives for tomato yield improvement.</li>
-            <li>Designed greenhouse and field trials for maize and tomato under varied conditions.</li>
-            <li>Performed high-throughput yeast two-hybrid screens mapping plant defense networks.</li>
-          </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold">Postdoctoral Fellow | UNICAMP & University of Texas at Arlington</h3>
-          <p class="text-sm text-gray-500">Brazil / USA — 2012–2016</p>
-          <ul class="list-disc ml-5 mt-2 text-gray-700">
-            <li>Discovered mechanisms of sugar regulation of circadian clocks (Current Biology, 2018).</li>
-            <li>Established RNA-seq and protein interaction pipelines (Y2H, BiFC).</li>
-            <li>Co-organized international workshops and mentored MSc/PhD students.</li>
-          </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold">Research Technician | Alellyx Applied Genomics</h3>
-          <p class="text-sm text-gray-500">São Paulo, Brazil — 2005–2008</p>
-          <ul class="list-disc ml-5 mt-2 text-gray-700">
-            <li>Contributed to transgenic citrus projects by curating EST libraries and engineering plant transformation vectors.</li>
-            <li>Validated constructs with bioinformatics pipelines (BLAST, Phred/Phrap/Consed).</li>
-            <li>Supported greenhouse and field trials and pathogen assays.</li>
-          </ul>
-        </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-extrabold mb-3">About AidBio</h2>
+        <p class="text-gray-700">Founded by <strong>Cleverson Matiolli, PhD</strong>, AidBio bridges experimental biology with modern data science. I combine domain knowledge in genetics, molecular biology, and plant physiology with robust ML and software engineering to deliver practical, decision‑ready results.</p>
       </div>
+      <aside class="bg-gray-50 border rounded-2xl p-6">
+        <h3 class="font-semibold mb-2">Core Stack</h3>
+        <p class="text-sm text-gray-700">Python • PyTorch • scikit‑learn • PyG • pandas • Plotly • Tailwind • Docker • MLflow • Ollama • llama.cpp</p>
+      </aside>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Key <span class="gradient-text">Projects</span></h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="project-card bg-white rounded-lg shadow p-6">
-          <h3 class="font-bold text-lg">Agrilyzer</h3>
-          <p class="text-sm text-gray-600">Geospatial machine learning tool integrating NASA POWER climate data for crop planning and yield forecasting.</p>
-        </div>
-        <div class="project-card bg-white rounded-lg shadow p-6">
-          <h3 class="font-bold text-lg">Precision Oncology Pipeline</h3>
-          <p class="text-sm text-gray-600">ML-driven patient stratification platform for personalized cancer treatment based on multi-omics data.</p>
-        </div>
-        <div class="project-card bg-white rounded-lg shadow p-6">
-          <h3 class="font-bold text-lg">3D‑Printed Implant Optimization</h3>
-          <p class="text-sm text-gray-600">Optimization of fabrication parameters using machine learning for high-performance biomedical implants.</p>
-        </div>
-        <div class="project-card bg-white rounded-lg shadow p-6">
-          <h3 class="font-bold text-lg">Rice Stress Resilience Networks</h3>
-          <p class="text-sm text-gray-600">Multi-omics integration to identify gene, protein, and metabolite networks underlying salt and drought tolerance in rice.</p>
-        </div>
-        <div class="project-card bg-white rounded-lg shadow p-6">
-          <h3 class="font-bold text-lg">Image-based Phenotyping</h3>
-          <p class="text-sm text-gray-600">Python-based computer vision pipelines for high-throughput root and shoot measurements, reducing manual effort.</p>
-        </div>
-        <div class="project-card bg-white rounded-lg shadow p-6">
-          <h3 class="font-bold text-lg">GraphletGO</h3>
-          <p class="text-sm text-gray-600">Graph neural network model predicting protein functions from interaction networks and embeddings.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Core <span class="gradient-text">Competencies</span></h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div>
-          <h3 class="font-semibold mb-2">Data Science & Machine Learning</h3>
-          <p class="text-gray-700">Python, R, SQL, PyTorch, PyTorch Geometric, scikit‑learn, CNNs, GNNs, Explainable AI.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Bioinformatics</h3>
-          <p class="text-gray-700">RNA‑seq, transcriptomics, proteomics, genomics, BLAST, DESeq2, NetworkX.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Domain Expertise</h3>
-          <p class="text-gray-700">Molecular biology, chronobiology, stress physiology (Arabidopsis, rice, tomato, maize), protein interaction networks, gene regulation.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Data Analysis & Visualization</h3>
-          <p class="text-gray-700">Multivariate statistics, time‑series analysis, network analysis, ggplot2, Matplotlib, Plotly.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Collaboration & Leadership</h3>
-          <p class="text-gray-700">Grant writing, project management, mentoring MSc/PhD students, international partnerships.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Education & <span class="gradient-text">Training</span></h2>
-      <ul class="space-y-4 text-lg text-gray-700">
-        <li><b>Ph.D., Genetics & Molecular Biology</b> – State University of Campinas (UNICAMP), Brazil (2008–2012) | PhD Abroad at University of Texas at Arlington (2011–2012)</li>
-        <li><b>B.Sc., Life Sciences</b> – State University of Campinas (2002–2006)</li>
-        <li><b>Specialization, Data Mining & Machine Learning (180h)</b> – Unicamp Institute of Computing (2022)</li>
-        <li><b>Additional Training</b>: ML A–Z (Udemy); ML with R (IGC Portugal); Stanford CS231 (Graph Representation Learning); Karpathy “Neural Networks: Zero to Hero.”</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Get In <span class="gradient-text">Touch</span></h2>
-      <div class="text-center space-y-2 text-lg">
-        <p><i class="fas fa-envelope text-blue-500"></i> <a href="mailto:matiolli@gmail.com" class="hover:underline">matiolli@gmail.com</a></p>
-        <p><i class="fab fa-linkedin text-blue-500"></i> <a href="https://linkedin.com/in/matiollipt" class="hover:underline" target="_blank" rel="noopener">linkedin.com/in/matiollipt</a></p>
-        <p><i class="fab fa-github text-gray-700"></i> <a href="https://github.com/matiollipt" class="hover:underline" target="_blank" rel="noopener">github.com/matiollipt</a></p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow p-8 ring-1 ring-gray-100">
+        <h2 class="text-3xl font-extrabold mb-4">Let’s talk</h2>
+        <p class="text-gray-700 mb-6">Have a dataset, manuscript, or field trial to make sense of? I offer focused, fixed‑scope engagements and milestone‑based projects.</p>
+        <div class="flex flex-wrap items-center gap-6 text-gray-700">
+          <a class="inline-flex items-center gap-2 hover:text-emerald-600" href="mailto:matiolli@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0120.25 19.5H3.75A2.25 2.25 0 011.5 17.25V6.75Zm1.682-.318a.75.75 0 00-.932 1.172l8.25 6.563a1.5 1.5 0 001.9 0l8.25-6.563a.75.75 0 10-.932-1.172L12 12.69 3.182 6.432Z"/></svg>matiolli@gmail.com</a>
+          <a class="inline-flex items-center gap-2 hover:text-emerald-600" href="https://linkedin.com/in/matiollipt" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="inline-flex items-center gap-2 hover:text-emerald-600" href="https://github.com/matiollipt" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-6 bg-gray-800 text-white text-center">
-    <p>&copy; 2025 Cleverson Matiolli. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer class="py-8 bg-gray-900 text-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="aidbio_icon.png" alt="AidBio icon" class="h-6 w-6"/>
+        <span class="text-sm">© 2025 AidBio — All rights reserved.</span>
+      </div>
+      <div class="text-sm">Lisbon, PT • Campinas, BR</div>
+    </div>
   </footer>
 </body>
 </html>

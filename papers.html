@@ -1,531 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cleverson Matiolli - Publications</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-      .publication-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-      }
-      .journal-badge {
-        position: absolute;
-        top: -10px;
-        left: -10px;
-      }
-      .year-badge {
-        position: absolute;
-        top: -10px;
-        right: -10px;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 font-sans">
-    <div class="container mx-auto px-4 py-12 max-w-6xl">
-      <header class="mb-12 text-center">
-        <div class="flex flex-col items-center">
-          <div
-            class="w-24 h-24 rounded-full bg-gradient-to-r from-blue-500 to-green-400 p-1 mb-4">
-            <div
-              class="w-full h-full rounded-full bg-white flex items-center justify-center">
-              <i class="fas fa-user-graduate text-3xl text-blue-500"></i>
-            </div>
-          </div>
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-1">
-            Dr. Cleverson Matiolli
-          </h1>
-          <p class="text-lg text-gray-600">
-            Consultant in Data Science and AI
-            <br />Computational Biology | Precision Agriculture | Research Service
-          </p>
-          <div class="flex items-center text-blue-600 mt-2">
-            <i class="fas fa-envelope mr-2"></i>
-            <a href="mailto:matiolli@gmail.com">matiolli@gmail.com</a>
-            <i class="fab fa-linkedin ml-4 mr-2"></i
-            ><a href="https://linkedin.com/in/cleversonmatiolli" target="_blank"
-              >linkedin.com/in/matiollipt</a
-            >
-            <i class="fab fa-github ml-4 mr-2"></i
-            ><a href="https://github.com/matiollipt" target="_blank"
-              >github.com/matiollipt</a
-            >
-            
-          </div>
-          <div class="flex flex-wrap justify-center mt-4 gap-2">
-            <span
-              class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
-              >Arabidopsis</span
-            >
-            <span
-              class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm"
-              >Rice</span
-            >
-            <span
-              class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
-              >Stress physiology</span
-            >
-            <span
-              class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm"
-              >Circadian clocks</span
-            >
-            <span
-              class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm"
-              >Protein networks</span
-            >
-          </div>
-        </div>
-      </header>
-      <section>
-        <div class="flex justify-between items-center mb-8">
-          <h2 class="text-2xl font-bold text-gray-800">Top Publications</h2>
-          <div class="flex items-center">
-            <span class="text-sm text-gray-500 mr-2">Sort by:</span>
-            <select
-              id="sortSelect"
-              class="border rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="year-desc">Year (Recent First)</option>
-              <option value="year-asc">Year (Oldest First)</option>
-              <option value="alpha">Alphabetical (Title)</option>
-            </select>
-          </div>
-        </div>
-        <div id="pubGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2025"
-            data-title="regulation of abscisic acid receptor mrna stability: involvement of microrna5628 in pyl6 transcript decay">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                Plant Physiology
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2025
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Regulation of abscisic acid receptor mRNA stability: Involvement
-                of microRNA5628 in PYL6 transcript decay
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Vieira, João GP, Duarte, Gustavo T, Barrera-Rojas, Carlos H,
-                Matiolli, Cleverson C, et al.
-              </p>
-              <p class="text-sm text-gray-500 mb-4">
-                Plant Physiology 197.0 (1.0), kiae663
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Regulation</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Abscisic</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Acid</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2024"
-            data-title="assessing the interactions between the circadian clock and gibberellin signalling in rice">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                nan
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2024
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Assessing the interactions between the circadian clock and
-                gibberellin signalling in rice
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Oliveira Henriques, Rita, Abreu, Isabel, Matiolli, Cleverson
-              </p>
-              <p class="text-sm text-gray-500 mb-4">nan</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Assessing</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Interactions</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Between</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2024"
-            data-title="dynamics of microbial ecology and their bio-preservative compounds formed during the panettones elaboration using sourdough-isolated strains as starter cultures">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                Food Bioscience
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2024
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Dynamics of microbial ecology and their bio-preservative
-                compounds formed during the panettones elaboration using
-                sourdough-isolated strains as starter cultures
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Stefanello, Raquel F, Vilela, Leonardo F, Margalho, Larissa P,
-                Nabeshima, Elizabeth H, et al.
-              </p>
-              <p class="text-sm text-gray-500 mb-4">
-                Food Bioscience 60.0, 104279
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Dynamics</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Microbial</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Ecology</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2024"
-            data-title="sumoylation of rice della slr1 modulates transcriptional responses and improves yield under salt stress">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                Planta
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2024
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                SUMOylation of rice DELLA SLR1 modulates transcriptional
-                responses and improves yield under salt stress
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Fernandes, Telma, Gonçalves, Nuno M, Matiolli, Cleverson C,
-                Rodrigues, Mafalda AA, et al.
-              </p>
-              <p class="text-sm text-gray-500 mb-4">Planta 260.0 (6.0), 136</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Sumoylation</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Rice</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Della</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2023"
-            data-title="regulation of pyr/pyl/rcar aba receptors mrna stability: involvement of mir5628 in decay of pyl6 mrna">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                bioRxiv
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2023
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Regulation of PYR/PYL/RCAR ABA receptors mRNA stability:
-                involvement of miR5628 in decay of PYL6 mRNA
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Vieira, João GP, Duarte, Gustavo T, Barrera-Rojas, Carlos H,
-                Matiolli, Cleverson C, et al.
-              </p>
-              <p class="text-sm text-gray-500 mb-4">
-                bioRxiv, 2023.01. 17.524441
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Regulation</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Pyr/pyl/rcar</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Receptors</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2023"
-            data-title="role of the arabidopsis atbzip63 transcription factor stability in energy management">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                nan
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2023
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Role of the arabidopsis ATBzip63 transcription factor stability
-                in energy management
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Carlson, Pamela, Silva, Luis Felipe Correa da, Vieira, João
-                Guilherme Portugal, Campos, Raphael de Araújo, et al.
-              </p>
-              <p class="text-sm text-gray-500 mb-4">nan</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Role</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Atbzip63</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Transcription</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2022"
-            data-title="turning the knobs: the impact of post-translational modifications on carbon metabolism">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                Frontiers in Plant Science
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2022
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Turning the knobs: the impact of post-translational
-                modifications on carbon metabolism
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Matiolli, Cleverson C, Soares, Rafael Cavém, Alves, Hugo LS,
-                Abreu, Isabel A
-              </p>
-              <p class="text-sm text-gray-500 mb-4">
-                Frontiers in Plant Science 12.0, 781508
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Turning</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Knobs</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Impact</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2022"
-            data-title="visualization of a curated oryza sativa l. cdpks protein-protein interaction network (cdpk-osppin)">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                Micropublication Biology
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2022
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Visualization of a curated Oryza sativa L. CDPKs Protein-Protein
-                Interaction Network (CDPK-OsPPIN)
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Marques, Joana, Matiolli, Cleverson C, Abreu, Isabel A
-              </p>
-              <p class="text-sm text-gray-500 mb-4">
-                Micropublication Biology 2022.0, 10.17912/micropub. biology.
-                000513
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Visualization</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Curated</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Oryza</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2021"
-            data-title="carbon/nitrogen metabolism and stress response networks–calcium-dependent protein kinases as the missing link?">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                Journal of Experimental Botany
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2021
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Carbon/nitrogen metabolism and stress response
-                networks–calcium-dependent protein kinases as the missing link?
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Alves, Hugo LS, Matiolli, Cleverson C, Soares, Rafael C,
-                Almadanim, M Cecília, et al.
-              </p>
-              <p class="text-sm text-gray-500 mb-4">
-                Journal of Experimental Botany 72.0 (12.0), 4190-4201
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Carbon/nitrogen</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Metabolism</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Stress</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md overflow-hidden publication-card transition-all duration-300 relative"
-            data-year="2021"
-            data-title="the sugar‐responsive circadian clock regulator bzip63 modulates plant growth">
-            <div class="p-6">
-              <div
-                class="journal-badge bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                New Phytologist
-              </div>
-              <div
-                class="year-badge bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                2021
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                The sugar‐responsive circadian clock regulator bZIP63 modulates
-                plant growth
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Viana, Américo JC, Matiolli, Cleverson C, Newman, David W,
-                Vieira, João GP, et al.
-              </p>
-              <p class="text-sm text-gray-500 mb-4">
-                New Phytologist 231.0 (5.0), 1875-1889
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Sugar‐responsive</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Circadian</span
-                >
-                <span class="text-xs px-2 py-1 bg-blue-50 text-blue-600 rounded"
-                  >Clock</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer
-        class="mt-16 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
-        <div class="flex justify-center space-x-6 mb-4">
-          <a
-            href="https://scholar.google.com/citations?user=jk2GJNQAAAAJ&hl=en"
-            class="text-blue-500 hover:text-blue-700"
-            target="_blank"
-            rel="noopener">
-            <i class="fab fa-google-scholar text-xl"></i>
-          </a>
-          <a
-            href="https://www.researchgate.net/profile/Cleverson_Matiolli"
-            class="text-blue-500 hover:text-blue-700"
-            target="_blank"
-            rel="noopener">
-            <i class="fab fa-researchgate text-xl"></i>
-          </a>
-          <a
-            href="https://orcid.org/0000-0001-8185-7628"
-            class="text-blue-500 hover:text-blue-700"
-            target="_blank"
-            rel="noopener">
-            <i class="fab fa-orcid text-xl"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/matiollipt"
-            class="text-blue-500 hover:text-blue-700"
-            target="_blank"
-            rel="noopener">
-            <i class="fab fa-linkedin text-xl"></i>
-          </a>
-        </div>
-        <p>© 2025 Dr. Cleverson Matiolli. All rights reserved.</p>
-      </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — AidBio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --aidbio-primary:#0ea5a8; /* teal-500 */
+      --aidbio-accent:#22c55e;  /* green-500 */
+      --aidbio-ink:#0b1b1b;     /* charcoal */
+    }
+    html,body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Apple Color Emoji','Segoe UI Emoji',sans-serif}
+    .aidbio-gradient{background-image:linear-gradient(90deg,var(--aidbio-primary),var(--aidbio-accent));}
+    .aidbio-text-gradient{background-image:linear-gradient(90deg,var(--aidbio-primary),var(--aidbio-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- NAV -->
+  <nav class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/80 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="aidbio_icon.png" alt="AidBio" class="h-8 w-8 rounded"/>
+        <span class="font-extrabold text-lg aidbio-text-gradient">AidBio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html#services" class="text-gray-700 hover:text-emerald-600">Services</a>
+        <a href="index.html#work" class="text-gray-700 hover:text-emerald-600">Featured Work</a>
+        <a href="#" class="text-emerald-600">Publications</a>
+        <a href="index.html#about" class="text-gray-700 hover:text-emerald-600">About</a>
+        <a href="index.html#contact" class="text-gray-700 hover:text-emerald-600">Contact</a>
+      </div>
     </div>
-    <script>
-      const sortSelect = document.getElementById("sortSelect");
-      const pubGrid = document.getElementById("pubGrid");
-      sortSelect.addEventListener("change", function () {
-        const option = this.value;
-        const cards = Array.from(pubGrid.children);
-        let sorted;
-        if (option === "year-desc") {
-          sorted = cards.sort(
-            (a, b) =>
-              parseInt(b.getAttribute("data-year")) -
-              parseInt(a.getAttribute("data-year"))
-          );
-        } else if (option === "year-asc") {
-          sorted = cards.sort(
-            (a, b) =>
-              parseInt(a.getAttribute("data-year")) -
-              parseInt(b.getAttribute("data-year"))
-          );
-        } else if (option === "alpha") {
-          sorted = cards.sort((a, b) => {
-            const titleA = a.getAttribute("data-title");
-            const titleB = b.getAttribute("data-title");
-            return titleA.localeCompare(titleB);
-          });
-        } else {
-          sorted = cards;
-        }
-        sorted.forEach((card) => pubGrid.appendChild(card));
-      });
-    </script>
-  </body>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="pt-28 pb-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-3 text-gray-900">Publications</h1>
+      <p class="text-gray-600">Peer‑reviewed journal articles. Top 5 highlighted; see Google Scholar for the full list.</p>
+    </div>
+  </header>
+
+  <!-- TOP 5 HIGHLIGHTS -->
+  <section class="py-8 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Top 5</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+
+        <!-- 1 -->
+        <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <a href="https://doi.org/10.1104/pp.111.181743" target="_blank" rel="noopener" class="group">
+                <h3 class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">The Arabidopsis bZIP Gene AtbZIP63 Is a Sensitive Integrator of Transient Abscisic Acid and Glucose Signals</h3>
+              </a>
+              <p class="mt-1 text-sm text-gray-600">Matiolli, C.C.; Tomaz, J.P.; Duarte, G.T.; Prado, F.M.; Del Bem, L.E.V.; Silveira, A.B.; Gauer, L.; Corrêa, L.G.G.; Drumond, R.D.; Viana, A.J.C.; Di Mascio, P.; Meyer, C.; Vincentz, M.</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50">Plant Physiology • 2011</span>
+          </div>
+          <p class="mt-4 text-gray-700 text-sm leading-relaxed">AtbZIP63 integrates abscisic acid (ABA) and glucose signals in Arabidopsis. Its expression is transiently repressed by low glucose independently of HXK1 and ABA, while high glucose repression requires ABA. Combined ABA and glucose enhance repression of AtbZIP63 and its homologue AtbZIP3, indicating a role in coordinating metabolic and stress signals.</p>
+          <div class="mt-4 flex items-center gap-4 text-sm">
+            <a href="https://doi.org/10.1104/pp.111.181743" target="_blank" rel="noopener" class="text-emerald-700 hover:underline">DOI / Publisher</a>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <a href="https://doi.org/10.1016/j.cub.2018.05.092" target="_blank" rel="noopener" class="group">
+                <h3 class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">Circadian Entrainment in Arabidopsis by the Sugar-Responsive Transcription Factor bZIP63</h3>
+              </a>
+              <p class="mt-1 text-sm text-gray-600">Frank, A.; Matiolli, C.C.; Viana, A.J.C.; Hearn, T.J.; Kusakina, J.; Belbin, F.E.; Wells Newman, D.; Yochikawa, A.; Cano-Ramirez, D.L.; Chembath, A.; Cragg-Barber, K.; Haydon, M.J.; Hotta, C.T.; Vincentz, M.; Webb, A.A.R.; Dodd, A.N.</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50">Current Biology • 2018</span>
+          </div>
+          <p class="mt-4 text-gray-700 text-sm leading-relaxed">This study shows that circadian rhythms in Arabidopsis are entrained by sugar signals through the bZIP63 transcription factor. bZIP63 interacts with SnRK1 signaling and regulates PRR7 to adjust the circadian oscillator in response to carbon availability, providing a molecular link between energy status and clock function.</p>
+          <div class="mt-4 flex items-center gap-4 text-sm">
+            <a href="https://doi.org/10.1016/j.cub.2018.05.092" target="_blank" rel="noopener" class="text-emerald-700 hover:underline">DOI / Publisher</a>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <a href="https://doi.org/10.1111/nph.17518" target="_blank" rel="noopener" class="group">
+                <h3 class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">The Sugar-Responsive Circadian Clock Regulator bZIP63 Modulates Plant Growth</h3>
+              </a>
+              <p class="mt-1 text-sm text-gray-600">Viana, A.J.C.; Matiolli, C.C.; Newman, D.W.; Vieira, J.G.P.; Duarte, G.T.; Martins, M.C.M.; Gilbault, E.; Hotta, C.T.; Caldana, C.; Vincentz, M.</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50">New Phytologist • 2021</span>
+          </div>
+          <p class="mt-4 text-gray-700 text-sm leading-relaxed">The work reveals that bZIP63 coordinates sugar signaling with circadian regulation of starch metabolism, influencing growth. Loss of bZIP63 function impairs starch mobilization and biomass accumulation, while altered expression modulates carbon use efficiency, linking metabolism and clock regulation in plant development.</p>
+          <div class="mt-4 flex items-center gap-4 text-sm">
+            <a href="https://doi.org/10.1111/nph.17518" target="_blank" rel="noopener" class="text-emerald-700 hover:underline">DOI / Publisher</a>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <a href="https://doi.org/10.3389/fpls.2021.781508" target="_blank" rel="noopener" class="group">
+                <h3 class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">Turning the Knobs: The Impact of Post-translational Modifications on Carbon Metabolism</h3>
+              </a>
+              <p class="mt-1 text-sm text-gray-600">Matiolli, C.C.; Soares, R.C.; Alves, H.L.S.; Abreu, I.A.</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50">Frontiers in Plant Science • 2022</span>
+          </div>
+          <p class="mt-4 text-gray-700 text-sm leading-relaxed">This review highlights how post-translational modifications (PTMs) regulate carbon metabolism in plants. PTMs alter protein activity, stability, localization, and interactions, thereby influencing metabolic pathways and cellular energy balance. The article discusses phosphorylation, acetylation, ubiquitination, and SUMOylation as critical modulators of plant carbon use efficiency.</p>
+          <div class="mt-4 flex items-center gap-4 text-sm">
+            <a href="https://doi.org/10.3389/fpls.2021.781508" target="_blank" rel="noopener" class="text-emerald-700 hover:underline">DOI / Publisher</a>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <a href="https://doi.org/10.1007/s00425-024-04565-1" target="_blank" rel="noopener" class="group">
+                <h3 class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">SUMOylation of Rice DELLA SLR1 Modulates Transcriptional Responses and Improves Yield Under Salt Stress</h3>
+              </a>
+              <p class="mt-1 text-sm text-gray-600">Fernandes, T.; Gonçalves, N.M.; Matiolli, C.C.; Rodrigues, M.A.A.; Barros, P.M.; Oliveira, M.M.; Abreu, I.A.</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50">Planta • 2024</span>
+          </div>
+          <p class="mt-4 text-gray-700 text-sm leading-relaxed">This article demonstrates that SUMOylation of the rice DELLA protein SLR1 modulates transcriptional programs to enhance tolerance to salt stress. By disrupting specific protein interactions and regulating GA-related gene expression, SUMOylated SLR1 contributes to improved yield stability under salinity conditions.</p>
+          <div class="mt-4 flex items-center gap-4 text-sm">
+            <a href="https://doi.org/10.1007/s00425-024-04565-1" target="_blank" rel="noopener" class="text-emerald-700 hover:underline">DOI / Publisher</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LINK TO SCHOLAR FOR REMAINING-->
+  <section class="py-10 bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gray-50 rounded-2xl border p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-semibold">All other peer‑reviewed publications</h3>
+          <p class="text-sm text-gray-600">For the complete, continuously updated list, visit Google Scholar.</p>
+        </div>
+        <a href="https://scholar.google.com/citations?user=jk2GJNQAAAAJ&hl=en&authuser=2" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-white font-semibold shadow-md aidbio-gradient">View on Google Scholar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-gray-900 text-gray-200 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="aidbio_icon_no_text.png" alt="AidBio icon" class="h-6 w-6"/>
+        <span class="text-sm">© 2025 AidBio — All rights reserved.</span>
+      </div>
+      <div class="text-sm">Lisbon, PT • Campinas, BR</div>
+    </div>
+  </footer>
+</body>
 </html>
