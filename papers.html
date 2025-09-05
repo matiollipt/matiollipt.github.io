@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publications — AidBio</title>
+    <meta
+      name="description"
+      content="Peer-reviewed publications by Cleverson Matiolli, PhD (AidBio). Top papers in plant molecular biology, circadian regulation, and stress physiology; full list on Google Scholar." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,12 +45,22 @@
     </style>
   </head>
   <body class="bg-gray-50 text-gray-800">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white rounded px-3 py-2 shadow"
+      >Skip to content</a
+    >
+
     <!-- NAV -->
     <nav class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/80 border-b">
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="aidbio_icon.png" alt="AidBio" class="h-8 w-8 rounded" />
+          <img
+            src="assets/logo/aidbio_icon.png"
+            alt="AidBio"
+            class="h-8 w-8 rounded"
+            loading="lazy" />
           <span class="font-extrabold text-lg aidbio-text-gradient"
             >AidBio</span
           >
@@ -61,7 +74,9 @@
           <a href="index.html#work" class="text-gray-700 hover:text-emerald-600"
             >Featured Work</a
           >
-          <a href="#" class="text-emerald-600">Publications</a>
+          <a href="#" class="text-emerald-600" aria-current="page"
+            >Publications</a
+          >
           <a
             href="index.html#about"
             class="text-gray-700 hover:text-emerald-600"
@@ -84,267 +99,301 @@
           Publications
         </h1>
         <p class="text-gray-600">
-          Peer‑reviewed journal articles. Top 5 highlighted; see Google Scholar
+          Peer-reviewed journal articles. Top 5 highlighted; see Google Scholar
           for the full list.
         </p>
       </div>
     </header>
 
-    <!-- TOP 5 HIGHLIGHTS -->
-    <section class="py-8 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold mb-6">Top 5</h2>
-        <div class="grid gap-6 md:grid-cols-2">
-          <!-- 1 -->
-          <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
-            <div class="flex items-start justify-between gap-4">
-              <div>
+    <main id="main">
+      <!-- TOP 5 HIGHLIGHTS -->
+      <section class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold mb-6">Top 5</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <!-- 1 -->
+            <article
+              class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <a
+                    href="https://doi.org/10.1104/pp.111.181743"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group">
+                    <h3
+                      class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
+                      The Arabidopsis bZIP Gene AtbZIP63 Is a Sensitive
+                      Integrator of Transient Abscisic Acid and Glucose Signals
+                    </h3>
+                  </a>
+                  <p class="mt-1 text-sm text-gray-600">
+                    Matiolli, C.C.; Tomaz, J.P.; Duarte, G.T.; Prado, F.M.; Del
+                    Bem, L.E.V.; Silveira, A.B.; Gauer, L.; Corrêa, L.G.G.;
+                    Drumond, R.D.; Viana, A.J.C.; Di Mascio, P.; Meyer, C.;
+                    Vincentz, M.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
+                    >Plant Physiology • <time datetime="2011">2011</time></span
+                  >
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-orange-700 border-orange-200 bg-orange-50"
+                    >First Author</span
+                  >
+                </div>
+              </div>
+              <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+                AtbZIP63 integrates abscisic acid (ABA) and glucose signals in
+                Arabidopsis. Its expression is transiently repressed by low
+                glucose independently of HXK1 and ABA, while high glucose
+                repression requires ABA. Combined ABA and glucose enhance
+                repression of AtbZIP63 and its homologue AtbZIP3, indicating a
+                role in coordinating metabolic and stress signals.
+              </p>
+              <div class="mt-4 flex items-center gap-4 text-sm">
                 <a
                   href="https://doi.org/10.1104/pp.111.181743"
                   target="_blank"
-                  rel="noopener"
-                  class="group">
-                  <h3
-                    class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
-                    The Arabidopsis bZIP Gene AtbZIP63 Is a Sensitive Integrator
-                    of Transient Abscisic Acid and Glucose Signals
-                  </h3>
-                </a>
-                <p class="mt-1 text-sm text-gray-600">
-                  Matiolli, C.C.; Tomaz, J.P.; Duarte, G.T.; Prado, F.M.; Del
-                  Bem, L.E.V.; Silveira, A.B.; Gauer, L.; Corrêa, L.G.G.;
-                  Drumond, R.D.; Viana, A.J.C.; Di Mascio, P.; Meyer, C.;
-                  Vincentz, M.
-                </p>
+                  rel="noopener noreferrer"
+                  class="text-emerald-700 hover:underline"
+                  >DOI / Publisher</a
+                >
               </div>
-              <span
-                class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
-                >Plant Physiology • 2011</span
-              >
-            </div>
-            <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-              AtbZIP63 integrates abscisic acid (ABA) and glucose signals in
-              Arabidopsis. Its expression is transiently repressed by low
-              glucose independently of HXK1 and ABA, while high glucose
-              repression requires ABA. Combined ABA and glucose enhance
-              repression of AtbZIP63 and its homologue AtbZIP3, indicating a
-              role in coordinating metabolic and stress signals.
-            </p>
-            <div class="mt-4 flex items-center gap-4 text-sm">
-              <a
-                href="https://doi.org/10.1104/pp.111.181743"
-                target="_blank"
-                rel="noopener"
-                class="text-emerald-700 hover:underline"
-                >DOI / Publisher</a
-              >
-            </div>
-          </article>
+            </article>
 
-          <!-- 2 -->
-          <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
-            <div class="flex items-start justify-between gap-4">
-              <div>
+            <!-- 2 -->
+            <article
+              class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <a
+                    href="https://doi.org/10.1016/j.cub.2018.05.092"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group">
+                    <h3
+                      class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
+                      Circadian Entrainment in Arabidopsis by the
+                      Sugar-Responsive Transcription Factor bZIP63
+                    </h3>
+                  </a>
+                  <p class="mt-1 text-sm text-gray-600">
+                    Frank, A.; Matiolli, C.C.; Viana, A.J.C.; Hearn, T.J.;
+                    Kusakina, J.; Belbin, F.E.; Wells Newman, D.; Yochikawa, A.;
+                    Cano-Ramirez, D.L.; Chembath, A.; Cragg-Barber, K.; Haydon,
+                    M.J.; Hotta, C.T.; Vincentz, M.; Webb, A.A.R.; Dodd, A.N.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50">
+                    Current Biology • <time datetime="2018">2018</time>
+                  </span>
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-orange-700 border-orange-200 bg-orange-50">
+                    Co-first Author
+                  </span>
+                </div>
+              </div>
+              <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+                This study shows that circadian rhythms in Arabidopsis are
+                entrained by sugar signals through the bZIP63 transcription
+                factor. bZIP63 interacts with SnRK1 signaling and regulates PRR7
+                to adjust the circadian oscillator in response to carbon
+                availability, providing a molecular link between energy status
+                and clock function.
+              </p>
+              <div class="mt-4 flex items-center gap-4 text-sm">
                 <a
                   href="https://doi.org/10.1016/j.cub.2018.05.092"
                   target="_blank"
-                  rel="noopener"
-                  class="group">
-                  <h3
-                    class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
-                    Circadian Entrainment in Arabidopsis by the Sugar-Responsive
-                    Transcription Factor bZIP63
-                  </h3>
-                </a>
-                <p class="mt-1 text-sm text-gray-600">
-                  Frank, A.; Matiolli, C.C.; Viana, A.J.C.; Hearn, T.J.;
-                  Kusakina, J.; Belbin, F.E.; Wells Newman, D.; Yochikawa, A.;
-                  Cano-Ramirez, D.L.; Chembath, A.; Cragg-Barber, K.; Haydon,
-                  M.J.; Hotta, C.T.; Vincentz, M.; Webb, A.A.R.; Dodd, A.N.
-                </p>
+                  rel="noopener noreferrer"
+                  class="text-emerald-700 hover:underline"
+                  >DOI / Publisher</a
+                >
               </div>
-              <span
-                class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
-                >Current Biology • 2018</span
-              >
-            </div>
-            <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-              This study shows that circadian rhythms in Arabidopsis are
-              entrained by sugar signals through the bZIP63 transcription
-              factor. bZIP63 interacts with SnRK1 signaling and regulates PRR7
-              to adjust the circadian oscillator in response to carbon
-              availability, providing a molecular link between energy status and
-              clock function.
-            </p>
-            <div class="mt-4 flex items-center gap-4 text-sm">
-              <a
-                href="https://doi.org/10.1016/j.cub.2018.05.092"
-                target="_blank"
-                rel="noopener"
-                class="text-emerald-700 hover:underline"
-                >DOI / Publisher</a
-              >
-            </div>
-          </article>
+            </article>
 
-          <!-- 3 -->
-          <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
-            <div class="flex items-start justify-between gap-4">
-              <div>
+            <!-- 3 -->
+            <article
+              class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <a
+                    href="https://doi.org/10.1111/nph.17518"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group">
+                    <h3
+                      class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
+                      The Sugar-Responsive Circadian Clock Regulator bZIP63
+                      Modulates Plant Growth
+                    </h3>
+                  </a>
+                  <p class="mt-1 text-sm text-gray-600">
+                    Viana, A.J.C.; Matiolli, C.C.; Newman, D.W.; Vieira, J.G.P.;
+                    Duarte, G.T.; Martins, M.C.M.; Gilbault, E.; Hotta, C.T.;
+                    Caldana, C.; Vincentz, M.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50">
+                    New Phytologist • <time datetime="2021">2021</time>
+                  </span>
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-orange-700 border-orange-200 bg-orange-50">
+                    Co-first Author
+                  </span>
+                </div>
+              </div>
+              <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+                The work reveals that bZIP63 coordinates sugar signaling with
+                circadian regulation of starch metabolism, influencing growth.
+                Loss of bZIP63 function impairs starch mobilization and biomass
+                accumulation, while altered expression modulates carbon use
+                efficiency, linking metabolism and clock regulation in plant
+                development.
+              </p>
+              <div class="mt-4 flex items-center gap-4 text-sm">
                 <a
                   href="https://doi.org/10.1111/nph.17518"
                   target="_blank"
-                  rel="noopener"
-                  class="group">
-                  <h3
-                    class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
-                    The Sugar-Responsive Circadian Clock Regulator bZIP63
-                    Modulates Plant Growth
-                  </h3>
-                </a>
-                <p class="mt-1 text-sm text-gray-600">
-                  Viana, A.J.C.; Matiolli, C.C.; Newman, D.W.; Vieira, J.G.P.;
-                  Duarte, G.T.; Martins, M.C.M.; Gilbault, E.; Hotta, C.T.;
-                  Caldana, C.; Vincentz, M.
-                </p>
+                  rel="noopener noreferrer"
+                  class="text-emerald-700 hover:underline"
+                  >DOI / Publisher</a
+                >
               </div>
-              <span
-                class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
-                >New Phytologist • 2021</span
-              >
-            </div>
-            <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-              The work reveals that bZIP63 coordinates sugar signaling with
-              circadian regulation of starch metabolism, influencing growth.
-              Loss of bZIP63 function impairs starch mobilization and biomass
-              accumulation, while altered expression modulates carbon use
-              efficiency, linking metabolism and clock regulation in plant
-              development.
-            </p>
-            <div class="mt-4 flex items-center gap-4 text-sm">
-              <a
-                href="https://doi.org/10.1111/nph.17518"
-                target="_blank"
-                rel="noopener"
-                class="text-emerald-700 hover:underline"
-                >DOI / Publisher</a
-              >
-            </div>
-          </article>
+            </article>
 
-          <!-- 4 -->
-          <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
-            <div class="flex items-start justify-between gap-4">
-              <div>
+            <!-- 4 -->
+            <article
+              class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <a
+                    href="https://doi.org/10.3389/fpls.2021.781508"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group">
+                    <h3
+                      class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
+                      Turning the Knobs: The Impact of Post-translational
+                      Modifications on Carbon Metabolism
+                    </h3>
+                  </a>
+                  <p class="mt-1 text-sm text-gray-600">
+                    Matiolli, C.C.; Soares, R.C.; Alves, H.L.S.; Abreu, I.A.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
+                    >Frontiers in Plant Science •
+                    <time datetime="2022">2022</time>
+                  </span>
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-orange-700 border-orange-200 bg-orange-50">
+                    First Author
+                  </span>
+                </div>
+              </div>
+              <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+                This review highlights how post-translational modifications
+                (PTMs) regulate carbon metabolism in plants. PTMs alter protein
+                activity, stability, localization, and interactions, thereby
+                influencing metabolic pathways and cellular energy balance. The
+                article discusses phosphorylation, acetylation, ubiquitination,
+                and SUMOylation as critical modulators of plant carbon use
+                efficiency.
+              </p>
+              <div class="mt-4 flex items-center gap-4 text-sm">
                 <a
                   href="https://doi.org/10.3389/fpls.2021.781508"
                   target="_blank"
-                  rel="noopener"
-                  class="group">
-                  <h3
-                    class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
-                    Turning the Knobs: The Impact of Post-translational
-                    Modifications on Carbon Metabolism
-                  </h3>
-                </a>
-                <p class="mt-1 text-sm text-gray-600">
-                  Matiolli, C.C.; Soares, R.C.; Alves, H.L.S.; Abreu, I.A.
-                </p>
+                  rel="noopener noreferrer"
+                  class="text-emerald-700 hover:underline"
+                  >DOI / Publisher</a
+                >
               </div>
-              <span
-                class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
-                >Frontiers in Plant Science • 2022</span
-              >
-            </div>
-            <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-              This review highlights how post-translational modifications (PTMs)
-              regulate carbon metabolism in plants. PTMs alter protein activity,
-              stability, localization, and interactions, thereby influencing
-              metabolic pathways and cellular energy balance. The article
-              discusses phosphorylation, acetylation, ubiquitination, and
-              SUMOylation as critical modulators of plant carbon use efficiency.
-            </p>
-            <div class="mt-4 flex items-center gap-4 text-sm">
-              <a
-                href="https://doi.org/10.3389/fpls.2021.781508"
-                target="_blank"
-                rel="noopener"
-                class="text-emerald-700 hover:underline"
-                >DOI / Publisher</a
-              >
-            </div>
-          </article>
+            </article>
 
-          <!-- 5 -->
-          <article class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
-            <div class="flex items-start justify-between gap-4">
-              <div>
+            <!-- 5 -->
+            <article
+              class="bg-white rounded-2xl shadow ring-1 ring-gray-200 p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <a
+                    href="https://doi.org/10.1007/s00425-024-04565-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group">
+                    <h3
+                      class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
+                      SUMOylation of Rice DELLA SLR1 Modulates Transcriptional
+                      Responses and Improves Yield Under Salt Stress
+                    </h3>
+                  </a>
+                  <p class="mt-1 text-sm text-gray-600">
+                    Fernandes, T.; Gonçalves, N.M.; Matiolli, C.C.; Rodrigues,
+                    M.A.A.; Barros, P.M.; Oliveira, M.M.; Abreu, I.A.
+                  </p>
+                </div>
+                <span
+                  class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
+                  >Planta • <time datetime="2024">2024</time></span
+                >
+              </div>
+              <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+                This article demonstrates that SUMOylation of the rice DELLA
+                protein SLR1 modulates transcriptional programs to enhance
+                tolerance to salt stress. By disrupting specific protein
+                interactions and regulating GA-related gene expression,
+                SUMOylated SLR1 contributes to improved yield stability under
+                salinity conditions.
+              </p>
+              <div class="mt-4 flex items-center gap-4 text-sm">
                 <a
                   href="https://doi.org/10.1007/s00425-024-04565-1"
                   target="_blank"
-                  rel="noopener"
-                  class="group">
-                  <h3
-                    class="text-xl font-semibold leading-snug group-hover:text-emerald-700 transition-colors">
-                    SUMOylation of Rice DELLA SLR1 Modulates Transcriptional
-                    Responses and Improves Yield Under Salt Stress
-                  </h3>
-                </a>
-                <p class="mt-1 text-sm text-gray-600">
-                  Fernandes, T.; Gonçalves, N.M.; Matiolli, C.C.; Rodrigues,
-                  M.A.A.; Barros, P.M.; Oliveira, M.M.; Abreu, I.A.
-                </p>
+                  rel="noopener noreferrer"
+                  class="text-emerald-700 hover:underline"
+                  >DOI / Publisher</a
+                >
               </div>
-              <span
-                class="shrink-0 inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-emerald-700 border-emerald-200 bg-emerald-50"
-                >Planta • 2024</span
-              >
-            </div>
-            <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-              This article demonstrates that SUMOylation of the rice DELLA
-              protein SLR1 modulates transcriptional programs to enhance
-              tolerance to salt stress. By disrupting specific protein
-              interactions and regulating GA-related gene expression, SUMOylated
-              SLR1 contributes to improved yield stability under salinity
-              conditions.
-            </p>
-            <div class="mt-4 flex items-center gap-4 text-sm">
-              <a
-                href="https://doi.org/10.1007/s00425-024-04565-1"
-                target="_blank"
-                rel="noopener"
-                class="text-emerald-700 hover:underline"
-                >DOI / Publisher</a
-              >
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- LINK TO SCHOLAR FOR REMAINING-->
-    <section class="py-10 bg-white border-t">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="bg-gray-50 rounded-2xl border p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <h3 class="text-lg font-semibold">
-              All other peer‑reviewed publications
-            </h3>
-            <p class="text-sm text-gray-600">
-              For the complete, continuously updated list, visit Google Scholar.
-            </p>
+            </article>
           </div>
-          <a
-            href="https://scholar.google.com/citations?user=jk2GJNQAAAAJ&hl=en&authuser=2"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-white font-semibold shadow-md aidbio-gradient"
-            >View on Google Scholar</a
-          >
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- LINK TO SCHOLAR FOR REMAINING-->
+      <section class="py-10 bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="bg-gray-50 rounded-2xl border p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">
+                All other peer-reviewed publications
+              </h3>
+              <p class="text-sm text-gray-600">
+                For the complete, continuously updated list, visit Google
+                Scholar.
+              </p>
+            </div>
+            <a
+              href="https://scholar.google.com/citations?user=jk2GJNQAAAAJ&hl=en&authuser=2"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-white font-semibold shadow-md aidbio-gradient"
+              >View on Google Scholar</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="py-8 bg-gray-900 text-gray-200 mt-10">
@@ -352,9 +401,10 @@
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
           <img
-            src="aidbio_icon_no_text.png"
+            src="assets/logo/aidbio_icon.png"
             alt="AidBio icon"
-            class="h-6 w-6" />
+            class="h-6 w-6"
+            loading="lazy" />
           <span class="text-sm">© 2025 AidBio — All rights reserved.</span>
         </div>
         <div class="text-sm">Lisbon, PT • Campinas, BR</div>
